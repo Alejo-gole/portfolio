@@ -11,14 +11,26 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+logs/
+*.log
 
 
 # environment variables
 .env
 .env.production
+.env.local
+.env.*.local
 
 # macOS-specific files
 .DS_Store
 
-# jetbrains setting folder
+# IDEs
 .idea/
+.vscode/
+
+# Temporary files
+.cache/
+.temp/
+
+#vercel
+.vercel/
