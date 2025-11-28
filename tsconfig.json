@@ -4,7 +4,7 @@
   "exclude": ["dist"],
   "compilerOptions": {
     "paths": {
-      "@CommonComponents/*": ["./src/components/common/*"]
+      "@CommonLayouts/*": ["./src/layouts/common/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
