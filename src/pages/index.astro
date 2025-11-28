@@ -1,21 +1,14 @@
 ---
-import Head from "@CommonLayouts/head.astro";
-import Footer from "@CommonLayouts/footer.astro";
+import BaseLayout from "@Layouts/baseLayout.astro";
 
 ---
-
-<html lang="en">
-	<head>
-		<Head page={{
-			title: "Portfolio",
-			description: "Página incial"
-		}} />
-		<meta name="generator" content={Astro.generator} />
-		
-	</head>
-	<body>
-		<h1>Astro</h1>
-
-		<Footer />
-	</body>
-</html>
+<BaseLayout page={{
+	title: "Portafolio",
+	description: "Página principal del portafolio"
+}}>
+	<section>
+		<div>
+			<h1>Bienvenido al portafolio</h1>
+		</div>
+	</section>
+</BaseLayout>

@@ -1,0 +1,36 @@
+---
+import NavSide from "@Components/navSidebar.jsx";
+import Footer from "@Layouts/common/footer.astro";
+
+import "../styles/global.css";
+
+const { page } = Astro.props
+---
+
+<html lang="es">
+	<head>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{page.title}</title>
+        <meta name="description" content={page.description} />
+        <meta name="author" content="Alejandro González" />
+        <meta name="keywords" content="Portfolio, Astro, Alejandro González, Developer" />
+		<meta name="generator" content={Astro.generator} />
+
+        <!-- Web analytics -->
+
+        <!-- Open Graph tags -->
+		
+	</head>
+	<body class="bg-[#000d11] text-white">
+
+        <NavSide client:load />
+		
+        <main class="border rounded-lg border-[#00a4d6]/50 p-2 md:p-10 m-10 md:m-46 bg-[#10181f]">
+            <slot />
+        </main>
+
+		<Footer />
+	</body>
+</html>
