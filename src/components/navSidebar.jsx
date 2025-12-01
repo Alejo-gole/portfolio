@@ -11,7 +11,9 @@ export default function Sidebar() {
 
   const navItems = [
     { name: "Home", href: "/", label: "Inicio" },
-    { name: "About", href: "/about", label: "Sobre mi" },
+    { name: "Vision", href: "/vision", label: "Manifiesto" },
+    { name: "Code", href: "/code", label: "Código vivo" },
+    { name: "Design", href: "/design", label: "Narrativa visual" },
   ];
 
   return (
@@ -56,11 +58,11 @@ export default function Sidebar() {
               <a
                 key={item.name}
                 href={item.href}
-                className={`block max-h-14 transition-all duration-200 ease-out relative
-                  after:content-[''] after:absolute after:bottom-0 after:left-4
-                  after:h-1 after:rounded-full after:bg-[#00a4d6] after:w-0
+                className={`block max-h-14 pl-2 transition-all duration-200 ease-out relative
+                  after:content-[''] after:absolute after:bottom-0 after:left-1
+                  after:h-0 after:rounded-full after:bg-[#00a4d6] after:w-1
                   after:transition-all after:duration-350 after:ease-in-out
-                  hover:text-[#00a4d6] hover:pl-5 hover:after:w-60 ${
+                  hover:text-[#00a4d6]/50 hover:pl-5 hover:after:h-10 ${
                     currentPath === item.href ? "pl-3 text-[#00a4d6]" : ""
                   }`}
               >

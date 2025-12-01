@@ -3,12 +3,14 @@ import BaseLayout from "@Layouts/baseLayout.astro";
 
 ---
 <BaseLayout page={{
-	title: "Portafolio",
+	title: "Inicio",
 	description: "Página principal del portafolio"
 }}>
-	<section>
-		<div>
-			<h1>Bienvenido al portafolio</h1>
-		</div>
-	</section>
+	<main class="bg-[url(/hero.png)] bg-fixed bg-cover bg-center bg-no-repeat">
+		<section class=" min-h-screen bg-white/80 backdrop-blur-sm p-8">
+			<div class="border rounded-lg border-[#00a4d6]/50 p-2 md:p-10 m-10 md:m-46 bg-[#10181f]">
+				<h1>Bienvenido al portafolio</h1>
+			</div>
+		</section>
+	</main>
 </BaseLayout>
