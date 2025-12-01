@@ -4,31 +4,31 @@ import Footer from "@Layouts/common/footer.astro";
 
 import "../styles/global.css";
 
-const { page } = Astro.props
+const { page } = Astro.props;
 ---
 
 <html lang="es">
-	<head>
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{page.title}</title>
-        <meta name="description" content={page.description} />
-        <meta name="author" content="Alejandro González" />
-        <meta name="keywords" content="Portfolio, Astro, Alejandro González, Developer" />
-		<meta name="generator" content={Astro.generator} />
+  <head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{page.title}</title>
+    <meta name="description" content={page.description} />
+    <meta name="author" content="Alejandro González" />
+    <meta name="keywords" content="Portfolio, Astro, Alejandro González, Developer" />
+    <meta name="generator" content={Astro.generator} />
 
-        <!-- Web analytics -->
+    <!-- Web analytics -->
 
-        <!-- Open Graph tags -->
-		
-	</head>
-	<body class="bg-linear-to-br from-[#000d11] to-[#00110c] text-white">
+    <!-- Open Graph tags -->
+  </head>
+  <body class="bg-[#000d11] text-white">
+    <NavSide client:load />
 
-        <NavSide client:load />
-		
-        <slot />
+    <slot />
 
-		<Footer />
-	</body>
+    <div class="relative bg-[#00110c] min-w-full bottom-0">
+      <Footer />
+    </div>
+  </body>
 </html>

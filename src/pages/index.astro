@@ -1,16 +1,78 @@
 ---
 import BaseLayout from "@Layouts/baseLayout.astro";
-
 ---
-<BaseLayout page={{
-	title: "Inicio",
-	description: "Página principal del portafolio"
-}}>
-	<main class="bg-[url(/hero.png)] bg-fixed bg-cover bg-center bg-no-repeat">
-		<section class=" min-h-screen bg-white/80 backdrop-blur-sm p-8">
-			<div class="border rounded-lg border-[#00a4d6]/50 p-2 md:p-10 m-10 md:m-46 bg-[#10181f]">
-				<h1>Bienvenido al portafolio</h1>
-			</div>
-		</section>
-	</main>
+
+<BaseLayout
+  page={{
+    title: "Inicio",
+    description: "Página principal del portafolio",
+  }}
+>
+  <main class="relative min-h-screen overflow-hidden">
+    <section class="relative max-h-screen">
+      <div class="absolute inset-0 bg-[url(/hero.png)] bg-fixed bg-cover bg-no-repeat blur-sm">
+      </div>
+      <div class="absolute inset-0 bg-[#000d11]/90"></div>
+      <section class="relative pt-25 pb-150 md:pb-150 md:pt-60">
+        <div class="fixed md:p-10 grid grid-cols-1 md:grid-cols-3">
+          <div class="flex flex-col pl-15 md:pl-30">
+            <p class="text-sm border-l-3 tracking-wide border-[#005874] italic pl-3 mb-3">
+              Comunicador Visual y Desarrollador
+            </p>
+            <h1 class="font-bold text-3xl md:text-7xl text-wrap">Alejandro González R</h1>
+            <p class="text-sm border bg-[#000d11] border-[#005874] rounded-full text-center w-1/2">
+              Disponible para trabajar
+            </p>
+          </div>
+          <div class="col-span-2 mt-10 md:mt-0 md:pl-15">
+            <div class="">
+              <div class="flex justify-center space-x-10 align-baseline mb-3 md:justify-normal">
+                <a
+                  href="https://www.behance.net/diegogonzale50"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    class="max-w-8 transition-all duration-200 ease-in-out transform hover:scale-110 hover:rotate-12 hover:drop-shadow-[0_10px_10px_rgba(0,164,214,0.5)]"
+                    src="/behance.svg"
+                    alt="Behance icon"
+                  />
+                </a>
+
+                <a href="https://github.com/Alejo-gole" target="_blank" rel="noopener noreferrer">
+                  <img
+                    class="max-w-6 transition-all duration-200 ease-in-out transform hover:scale-110 hover:rotate-12 hover:drop-shadow-[0_10px_10px_rgba(0,164,214,0.5)]"
+                    src="/github.svg"
+                    alt="gitHub icon"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/alejo-gole/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    class="max-w-6 transition-all duration-200 ease-in-out transform hover:scale-110 hover:rotate-12 hover:drop-shadow-[0_10px_10px_rgba(0,164,214,0.5)]"
+                    src="/linkedin.svg"
+                    alt="LinkedIn icon"
+                  />
+                </a>
+              </div>
+              <p class="max-w-screen px-8 text-center md:text-left md:px-0 md:pr-80">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptates,
+                quisquam possimus magnam pariatur suscipit reiciendis dolores harum totam quasi
+                earum labore porro, non iste iusto deleniti qui expedita eius!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="relative bg-[#00110c] min-w-screen">
+      <div>
+        <h2>Hola</h2>
+      </div>
+    </section>
+  </main>
 </BaseLayout>
